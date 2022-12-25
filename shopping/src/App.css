@@ -1,3 +1,12 @@
+.main-bg{
+  height: 400px;
+  background-image : url('./img/good1.png');
+  background-size : cover;
+  background-position : center;
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -23,6 +32,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
