@@ -1,5 +1,6 @@
 import { Button, Navbar,Container, Nav } from 'react-bootstrap';
 import './App.css';
+import good from './img/good.jpg'
 
 
 
@@ -16,7 +17,8 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <div className='main-bg'></div>
+
+      <div className='main-bg'  style={{backgroundimage : 'url('+good+')'}}></div>
     </div>
     
   );
