@@ -10,7 +10,7 @@ import Route2 from './data1.js'
 
 function App() {
 
-  let [shoes, Setshoes] = useState(data);
+  let [shoes] = useState(data);
   
   return (
     <div className="App">
@@ -26,26 +26,30 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+      
 
       <Routes>
         <Route path='/' element={
-        <Route1 shoes={shoes}></Route1>
+         <>
+         <div className="main-bg"></div>
+         <div className="container">
+           <div className="row">
+             { shoes.map((a, i)=>{
+               return (<Card shoes={shoes[i]} i={i} ></Card>
+              )})}
+            </div>
+          </div> 
+        </>
         }/>
 
         <Route path='/detail' element={<Route2/>}/>
       </Routes>
       
       <div className='main-bg'></div>
-    
       <div className="container">
-   <div className="row">
+      <div className="row">
 
-   {
-    shoes.map((a, i)=>{
-      return(
-      <Card shoes = {shoes[i]} i= {i}> </Card>)
-    }
-   )}
+   
   </div>
 </div> 
     </div>
@@ -64,38 +68,22 @@ function Card(props) {
 }
 
 function Route1(props){
-  return(
- <>
-          <div className='main-bg'></div>
-          <div className="container">
-       <div className="row">
-       {
-        props.shoes.map((a, i)=>{
-          return(
-          <Card shoes = {props.shoes[i]} i= {i}> </Card>)
-        }
-       )}
+  return( 
+    <>
+   <div className="main-bg"></div>
+   <div className="container">
+     <div className="row">
+       { props.shoes.map((a, i)=>{
+         return (<Card shoes={props.shoes[i]} i={i} ></Card>
+        )})}
       </div>
     </div> 
-        </>
+  </>
+
   )
 }
 
-// function Route2(){
-//   return(<div className="container">
-//   <div className="row">
-//     <div className="col-md-6">
-//       <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-//     </div>
-//     <div className="col-md-6">
-//       <h4 className="pt-5">상품명</h4>
-//       <p>상품설명</p>
-//       <p>120000원</p>
-//       <button className="btn btn-danger">주문하기</button> 
-//     </div>
-//   </div>
-// </div> )
-// }
+
 
 
 export default App;
