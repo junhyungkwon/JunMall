@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import data from './data.js';
-import Main from './component';
+
 
 
 function App() {
@@ -29,29 +29,26 @@ function App() {
       <div className="container">
    <div className="row">
     
-    <Main/>
-    <Main/>
-    <Main/>
-    {/* <div className="col-md-4">
-      <img src='https://user-images.githubusercontent.com/78072931/210526775-45912dc2-a771-4418-ba7d-00a712e503f8.png' width='59%'/>
-      <h4> {shop[1].title} </h4>
-      <p> {shop[1].content} </p>
-      <p> {shop[1].price} </p>
-    </div>
-    <div className="col-md-4">
-      <img src='https://user-images.githubusercontent.com/78072931/210526097-feeceb6f-b698-4b09-96f2-7ceca1657f1b.png' width='58%'/>
-      <h4> {shop[2].title} </h4>
-      <p> {shop[2].content} </p>
-      <p> {shop[2].price} </p>
-    </div> */}
-    
-
+    <Card shop = {shop[0]} i= {1}> </Card>
+    <Card shop = {shop[1]} i= {2}> </Card>
+    <Card shop = {shop[2]} i= {3}> </Card>
+   
   </div>
 </div> 
     </div>
   );
 }
-
+function Card(props) {
+  return (
+    <div className="col-md-4">
+    <img src={'https://codingapple1.github.io/shop/shoes'+ props.i +'.jpg'}  width="70%"/>
+    <h4> {props.shop.title} </h4>
+    <p> {props.shop.content} </p>
+    <p> {props.shop.price} </p>
+    </div>
+  )
+  
+}
 
 
 
