@@ -9,7 +9,7 @@ import data from './data.js';
 
 function App() {
 
-  let [shop, Setshop] = useState(data);
+  let [shoes, Setshoes] = useState(data);
   
   return (
     <div className="App">
@@ -29,10 +29,16 @@ function App() {
       <div className="container">
    <div className="row">
     
-    <Card shop = {shop[0]} i= {1}> </Card>
-    <Card shop = {shop[1]} i= {2}> </Card>
-    <Card shop = {shop[2]} i= {3}> </Card>
+    {/* <Card shoes = {shoes[0]} i= {1}> </Card> 
+    <Card shoes = {shoes[1]} i= {2}> </Card>
+    <Card shoes = {shoes[2]} i= {3}> </Card> */}
    
+   {
+    shoes.map((a, i)=>{
+      return(
+      <Card shoes = {shoes[i]} i= {i}> </Card>)
+    }
+   )}
   </div>
 </div> 
     </div>
@@ -41,10 +47,10 @@ function App() {
 function Card(props) {
   return (
     <div className="col-md-4">
-    <img src={'https://codingapple1.github.io/shop/shoes'+ props.i +'.jpg'}  width="70%"/>
-    <h4> {props.shop.title} </h4>
-    <p> {props.shop.content} </p>
-    <p> {props.shop.price} </p>
+    <img src={'https://codingapple1.github.io/shop/shoes'+ (props.i+1) +'.jpg'}  width="70%"/>
+    <h4> {props.shoes.title} </h4>
+    <p> {props.shoes.content} </p>
+    <p> {props.shoes.price} </p>
     </div>
   )
   
