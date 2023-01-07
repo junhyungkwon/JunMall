@@ -45,7 +45,7 @@ function App() {
         <Route path='/detail' element={<Route2/>}/>
       </Routes>
       
-      <div className='main-bg'></div>
+     
       <div className="container">
       <div className="row">
 
