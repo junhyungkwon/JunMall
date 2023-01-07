@@ -5,7 +5,8 @@ import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import data from './data.js';
 import {Routes, Route, Link, useNavigate, Outlet} from 'react-router-dom';
-import Route2 from './data1.js'
+import Route2 from './Detail.js'
+import Detail from './Detail.js';
 
 
 function App() {
@@ -43,27 +44,15 @@ function App() {
         </>
         }/>
 
-        <Route path='/detail' element={<About/>}>
-        <Route path='about' element={<div> 이름</div>}></Route>
-        <Route path='member' element={<div> 내용</div>}></Route>
+        <Route path='/detail/:id' element={<Detail shoes={shoes}/>}/>
+        
 
-        </Route>
 
       </Routes>
       
       
     </div>
   );
-}
-
-function About() {
-  return(
-    <div>
-      <h4>회사 정보</h4>
-
-    <Outlet></Outlet>
-    </div>
-  )
 }
 
 function Card(props) {
