@@ -4,9 +4,10 @@ import { useParams } from "react-router-dom";
  
 function Detail(props){
   let {id} = useParams();
-  let 찾은상품 = props.shoes.find(function(x){
-    return x.id == id
-  });
+  let 찾은상품 = props.shoes.find(x=> x.id == id);{
+    
+
+  }
 
     return( 
     <div className="container">
