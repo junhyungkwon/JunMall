@@ -1,1 +1,1 @@
-# react_shopping_project
+# React를 사용해서 쇼핑몰 웹 사이트 구현
