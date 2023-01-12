@@ -5,12 +5,11 @@ import { useParams } from "react-router-dom";
 function Detail(props){
 
   useEffect (()=>{
+    setTimeout(() => { setAlert(false)}, 2000);
     
   })
   
-  setTimeout(() => {
-    
-  }, 2000);
+  
 
   let [count, setCount] = useState(0);
   let [alert, setAlert] = useState(true)
@@ -22,9 +21,13 @@ function Detail(props){
 
     return( 
     <div className="container">
-      <div className="alert alert-warning">
-        2chdlso 
-      </div>
+      {
+        alert == true ?
+<div className="alert alert-warning">
+        2초간격으로 보여지는 창
+      </div> : null 
+      }
+      
       {count}
       <button onClick={()=> {
         setCount(count+1) }}> 버튼입니다 </button>
