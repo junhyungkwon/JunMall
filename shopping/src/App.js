@@ -47,8 +47,9 @@ function App() {
         <Route path='/detail/:id' element={<Detail shoes={shoes}/>}/>
         
       </Routes>
-      
-      
+     
+
+
     </div>
   );
 }
