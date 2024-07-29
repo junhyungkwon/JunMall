@@ -1,12 +1,9 @@
-import { Button, Navbar,Container, Nav } from 'react-bootstrap';
-import './App.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Navbar,Container, Nav } from 'react-bootstrap';
+import './styles/App.css';
 import { useState } from 'react';
-import data from './data.js';
-import {Routes, Route, Link, useNavigate, Outlet} from 'react-router-dom';
-import Route2 from './Detail.js'
-import Detail from './Detail.js';
+import data from './data/data.js';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import Detail from './components/detail/Detail.js';
 
 
 function App() {
@@ -20,10 +17,10 @@ function App() {
       
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Jun Shop</Navbar.Brand>
+          <Navbar.Brand href="/">Jun Shop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
-            <Nav.Link onClick={()=>{navigate('/detail')}}>Detail</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/best')}}>BEST</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/new')}}>NEW</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

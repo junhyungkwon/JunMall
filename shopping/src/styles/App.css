@@ -1,6 +1,6 @@
 .main-bg{
   height: 400px;
-   background-image : url('./img/good.jpg'); 
+  background-image : url('../img/good.jpg'); 
   background-size : cover;
   background-position : center;
 }
