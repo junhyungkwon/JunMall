@@ -1,1 +1,1 @@
-# React를 사용해서 쇼핑몰 웹 사이트 구현
+# JUN ShoopingMall
